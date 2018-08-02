@@ -9,6 +9,7 @@
    "author": "Sullivan Tobias",
    "license": "ISC",
    "dependencies": {
+      "bootstrap": "^4.0.0-alpha.6",
       "vue": "^2.5.16"
    }
 }
