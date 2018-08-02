@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <title>vueJS Test</title>
+</head>
+
+<body>
+    <div id="testComponent" v-if="visible" v-on:click="makeDisapear" v-on:mouseover="messageToUpperCase">
+        <span v-bind:title='hoverMessage'>
+            <p>{{ bodyMessage }}</p>
+        </span>
+    </div>
+
+    <div id="test-first-component">
+        <first-component></first-component>
+    </div>
+
+    <div id="list-test">
+        <ul>
+            <list-component v-for="item in listItem" v-bind:play="item" v-bind:key="item.id">
+            </list-component>
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
