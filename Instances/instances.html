@@ -12,26 +12,26 @@
 <body>
   <div class="container">
     <div class="row">
-      <!-- introduction Vue-->
-      <div class="col-xs-12" id="introduction" :title="hoverMessage">
-        <input type="checkbox" v-model="introductionClass" :true-value="'alert-success'" :false-value="'alert-danger'">
-        <div class="alert" :class="introductionClass">
-          <p> {{ successMessage }} </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
       <!-- List Vue-->
       <div class="col-xs-12" id="game-list">
         <ul v-if="success">
-          <li v-for="game in games"> {{game.id}} - {{ game.text }} </li>
-        </ul>s
+          <li v-for='game in games'> {{ game }}</li>
+          <input type="text" v-model="newGame"></input>
+          <button @click="addGame">Add Game</button>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Timer -->
+      <div class="timer">
+        <p> Mins {{ minutes}} : Seconds {{ seconds }}</p>
       </div>
     </div>
   </div>
 
   <script src="../node_modules/vue/dist/vue.js "></script>
-  <script src=" introduction.js "></script>
+  <script src="instances.js"></script>
 </body>
 
 </html>
