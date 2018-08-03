@@ -36,16 +36,10 @@ let timer = new Vue({
    beforeMount() {
       console.log('The element is not mounted yet');
    },
-   /** Mounter is called to be sure the element exists */
+   /** Mounted is called to be sure the element exists */
    mounted() {
       console.log('Element Mounted');
-      this.$myTimer = setInterval(() => {
-         this.seconds++;
-         if (this.seconds == 60) {
-            this.seconds = 0;
-            this.minutes++;
-         }
-      }, 1000);
+      this.updateTimer();
    },
    beforeUpdate() {
       console.log('The element will be updated');
@@ -59,6 +53,20 @@ let timer = new Vue({
    /** Destroy is called to 'destroy' the actual instance */
    destroyed() {
       console.log('Element Destroyed');
-      clearInterval(this.$myTimer);
+      this.clearTimer();
+   },
+   methods: {
+      updateTimer() {
+         this.$myTimer = setInterval(() => {
+            this.seconds++;
+            if (this.seconds == 60) {
+               this.seconds = 0;
+               this.minutes++;
+            }
+         }, 1000);
+      },
+      clearTimer() {
+         clearInterval(this.$myTimer);
+      },
    },
 });
