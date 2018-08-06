@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <title>Introduction</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="testIntructions">
+        <a href="hrefInstruction" @click.prevent="showHref"> Show Href onClick</a>
+        <input type="text" v-model.lazy.trim="message" @keyup="infos"> {{ message }}
+      </div>
+      </br>
+      </br>
+      <div id="directives">
+        <input type="text" v-mydirective>
+        <input type="text" v-testing placeholder="focus here">
+      </div>
+    </div>
+
+    <script src="../node_modules/vue/dist/vue.js "></script>
+    <script src="instructions.js"></script>
+</body>
+
+</html>
