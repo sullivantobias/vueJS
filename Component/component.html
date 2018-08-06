@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <title>Introduction</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div id="componentTest">
+        <!-- default message -->
+        <message>
+          <!-- Slots Section-->
+          <p slot="header">I'm a header slot</p>
+          <p slot="footer">I'm a footer slot</p>
+        </message>
+        <!-- dynamic message -->
+        <message :msg="message" :componentclass="classComponent"></message>
+        <!-- non-dynamic message -->
+        <message msg="My no-dynamic Component" componentclass="alert-danger" v-if="visible" @close="hiddenAlert"></message>
+        <br>
+        <button @click="show"> Show </button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Counter Section -->
+        <!-- Default Counter -->
+        <countertest></countertest>
+        <br>
+        <!-- Modifier Counter -->
+        <countertest :increment-number="10" :decrement-number="30"></countertest>
+      </div>
+
+    </div>
+
+    <script src="../node_modules/vue/dist/vue.js "></script>
+    <script src="component.js"></script>
+</body>
+
+</html>
