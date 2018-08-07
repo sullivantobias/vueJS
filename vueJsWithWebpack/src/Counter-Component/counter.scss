@@ -1,0 +1,31 @@
+.counter {
+  background-color: grey;
+
+  .count {
+    background-color: black;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+  }
+  button {
+    padding: 15px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    border: 5px solid black;
+
+    &.increment {
+      background-color: green;
+    }
+
+    &.decrement {
+      background-color: red;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
