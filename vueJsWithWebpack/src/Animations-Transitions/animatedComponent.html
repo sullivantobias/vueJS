@@ -1,0 +1,14 @@
+<div class="animatedComponent">
+    <transition name="fading" appear>
+        <div class="alert-success" v-if="visible">
+            <div>{{ msg }}</div>
+        </div>
+    </transition>
+
+    <transition name="bounce">
+        <div class="alert-success" v-if="visible">
+            <div>{{ msg2 }}</div>
+        </div>
+    </transition>
+    <button @click="toggle"> Bounce & Transitions </button>
+</div>

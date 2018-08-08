@@ -1,22 +1,28 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
+    <h1>{{ counterMessage }}</h1>
      
-    <!-- My Counter -->
+    <!-- counter component -->
     <counter></counter>
+
+    <h1>{{ animatedMessage }}</h1>
+    <!-- animated component -->
+    <animatedComponent></animatedComponent>
   </div>
 </template>
 
 <script>
 import counter from "./Counter-Component/Counter.vue";
+import animatedComponent from './Animations-Transitions/animatedComponent.vue'
 
 export default {
   name: 'app',
-  components: {counter},
+  components: {counter, animatedComponent},
   data () {
     return {
-      msg: 'This is my Counter Test with vue-cli'
+      counterMessage: 'This is my Counter Test with vue-cli',
+      animatedMessage: 'This is my Animated Component with vue-cli'
     }
   }
 }
